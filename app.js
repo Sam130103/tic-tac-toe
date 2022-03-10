@@ -22,8 +22,15 @@ const turn=document.querySelector('#turn')
 var val=document.querySelector('#val')
 var rok=parseInt(val.textContent)
 var woi=val.textContent
+const its=document.querySelector('#its')
+var audi=new Audio('beep.mp3')
+var win=new Audio('win.mp3')
+var end=new Audio('end.mp3')
+
+
 lol.addEventListener('click',change);
 function change(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -52,7 +59,9 @@ function change(){
 }
 function result(){
     if((tex.textContent==tex1.textContent) && ( tex1.textContent==tex2.textContent) ){
+      
        if(tex.textContent=="X" && tex1.textContent=="X" && tex2.textContent=="X"){
+        win.play()
            res.textContent="Player 1"
            turn.textContent="Game Over!!"
            init();
@@ -67,6 +76,7 @@ function result(){
            
        }
        else if( tex.textContent=="O" && tex1.textContent=="O" && tex2.textContent=="O"){
+        win.play()
            res.textContent="Player 2"
            turn.textContent="Game Over!!"
            init();
@@ -80,7 +90,9 @@ function result(){
        } 
     }
     else if(tex3.textContent==tex4.textContent && tex4.textContent==tex5.textContent){
+       
         if(tex3.textContent=="X" && tex4.textContent=="X" && tex5.textContent=="X"){
+            win.play()
             res.textContent="Player 1"
             turn.textContent="Game Over!!"
             init();
@@ -93,6 +105,7 @@ function result(){
                },1000)
         }
         else if( tex3.textContent=="O" && tex4.textContent=="O" && tex5.textContent=="O"){
+            win.play()
             res.textContent="Player 2"
             turn.textContent="Game Over!!"
             init();
@@ -106,7 +119,9 @@ function result(){
         } 
     }
     else if(tex6.textContent==tex7.textContent && tex7.textContent==tex8.textContent){
+        
         if(tex6.textContent=="X" && tex7.textContent=="X" && tex8.textContent=="X"){
+            win.play()
             res.textContent="Player 1"
             turn.textContent="Game Over!!"
             init();
@@ -119,6 +134,7 @@ function result(){
                },1000)
         }
         else if( tex6.textContent=="O" && tex7.textContent=="O" && tex8.textContent=="O"){
+            win.play()
             res.textContent="Player 2"
             turn.textContent="Game Over!!"
             init();
@@ -132,7 +148,9 @@ function result(){
         } 
     }
     else if(tex.textContent==tex3.textContent && tex3.textContent==tex6.textContent){
+        
         if(tex.textContent=="X" && tex3.textContent=="X" && tex6.textContent=="X"){
+            win.play()
             res.textContent="Player 1"
             turn.textContent="Game Over!!"
             init();
@@ -145,6 +163,7 @@ function result(){
                },1000)
         }
        else if( tex.textContent=="O" && tex3.textContent=="O" && tex6.textContent=="O"){
+        win.play()
             res.textContent="Player 2"
             turn.textContent="Game Over!!"
             init();
@@ -158,7 +177,9 @@ function result(){
         } 
     }
     else if(tex1.textContent==tex4.textContent && tex4.textContent==tex7.textContent){
+        
         if(tex1.textContent=="X" && tex4.textContent=="X" && tex7.textContent=="X"){
+            win.play()
             res.textContent="Player 1"
             turn.textContent="Game Over!!"
             init();
@@ -171,6 +192,7 @@ function result(){
                },1000)
         }
         else if( tex1.textContent=="O" && tex4.textContent=="O" && tex7.textContent=="O"){
+            win.play()
             res.textContent="Player 2"
             turn.textContent="Game Over!!"
             init();
@@ -184,7 +206,9 @@ function result(){
         } 
      }
     else if(tex2.textContent==tex5.textContent && tex5.textContent==tex8.textContent){
+        
         if(tex2.textContent=="X" && tex5.textContent=="X" && tex8.textContent=="X"){
+            win.play()
             res.textContent="Player 1"
             turn.textContent="Game Over!!"
             init();
@@ -197,6 +221,7 @@ function result(){
                },1000)
         }
         else if( tex2.textContent=="O" && tex5.textContent=="O" && tex8.textContent=="O"){
+            win.play()
             res.textContent="Player 2"
             turn.textContent="Game Over!!"
             init();
@@ -210,7 +235,9 @@ function result(){
         } 
      }
     else if(tex.textContent==tex4.textContent && tex4.textContent==tex8.textContent){
+        
         if(tex.textContent=="X" && tex4.textContent=="X" && tex8.textContent=="X"){
+            win.play()
             res.textContent="Player 1"
             turn.textContent="Game Over!!"
             init();
@@ -224,6 +251,7 @@ function result(){
                },1000)
          }
         else if( tex.textContent=="O" && tex4.textContent=="O" && tex8.textContent=="O"){
+            win.play()
             res.textContent="Player 2"
             turn.textContent="Game Over!!"
             init();
@@ -237,7 +265,9 @@ function result(){
         } 
      }
     else if(tex2.textContent==tex4.textContent && tex4.textContent==tex6.textContent){
+        
         if(tex2.textContent=="X" && tex4.textContent=="X" && tex6.textContent=="X"){
+            win.play()
             res.textContent="Player 1"
             turn.textContent="Game Over!!"
             init();
@@ -250,6 +280,7 @@ function result(){
                },1000)
         }
         else if( tex2.textContent=="O" && tex4.textContent=="O" && tex6.textContent=="O"){
+            win.play()
             res.textContent="Player 2"
             turn.textContent="Game Over!!"
             init();
@@ -264,6 +295,7 @@ function result(){
        
     }
     else if((val.textContent)==10){
+        end.play()
         res.textContent="Tied!!"
         turn.textContent="Game Over!!"
         init();
@@ -281,6 +313,7 @@ function result(){
 
 lol1.addEventListener('click',change1);
 function change1(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex1.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -294,6 +327,7 @@ function change1(){
         
         console.log(b)
         val.textContent=woi
+        
     }
     else{
         
@@ -311,6 +345,7 @@ function change1(){
 }
 lol2.addEventListener('click',change2);
 function change2(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex2.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -341,6 +376,7 @@ function change2(){
 }
 lol3.addEventListener('click',change3);
 function change3(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex3.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -367,6 +403,7 @@ function change3(){
 }
 lol4.addEventListener('click',change4);
 function change4(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex4.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -394,6 +431,7 @@ function change4(){
 }
 lol5.addEventListener('click',change5);
 function change5(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex5.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -422,6 +460,7 @@ function change5(){
 
 lol6.addEventListener('click',change6);
 function change6(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex6.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -450,6 +489,7 @@ function change6(){
 
 lol7.addEventListener('click',change7);
 function change7(){
+    audi.play()
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex7.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -476,6 +516,7 @@ function change7(){
 }
 lol8.addEventListener('click',change8);
 function change8(){
+    
     if(woi==1 || woi==3 || woi==5 || woi==7 || woi==9){
         tex8.textContent="X"
         woi=parseInt(val.textContent)+1
@@ -499,6 +540,7 @@ function change8(){
             }
     }
     result();
+    audi.play()
 }
 
 
